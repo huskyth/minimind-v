@@ -169,7 +169,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="MiniMind-V-SFT")
     parser.add_argument("--out_dir", type=str, default="out", help="Output directory")
     parser.add_argument("--epochs", type=int, default=19, help="Number of epochs")
-    parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
+    parser.add_argument("--batch_size", type=int, default=32, help="Batch size")
     parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate")
     parser.add_argument("--device", type=str, default="cuda:0" if torch.cuda.is_available() else "cpu",
                         help="Device to use")

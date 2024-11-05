@@ -4,3 +4,5 @@ model/clip_model/clip-vit-base-patch32
 .idea
 *png
 *json
+wandb
+upload
