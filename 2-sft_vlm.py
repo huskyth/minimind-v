@@ -174,7 +174,7 @@ if __name__ == "__main__":
     parser.add_argument("--device", type=str, default="cuda:0" if torch.cuda.is_available() else "cpu",
                         help="Device to use")
     parser.add_argument("--dtype", type=str, default="bfloat16", help="Data type")
-    parser.add_argument("--use_wandb", default=False, action="store_true", help="Use Weights & Biases")
+    parser.add_argument("--use_wandb", default=True, action="store_true", help="Use Weights & Biases")
     parser.add_argument("--wandb_project", type=str, default="MiniMind-V", help="Weights & Biases project name")
     parser.add_argument("--num_workers", type=int, default=8, help="Number of workers for data loading")
     parser.add_argument("--data_path", type=str, default="./dataset/LLaVA-Instruct/pokemon_data.json",
