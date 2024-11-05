@@ -408,7 +408,7 @@ class Transformer(PreTrainedModel):
                             before = h[i][:start_idx, :]
                             after = h[i][end_idx + 1:, :]
                             # DEBUG TODO
-                            if vision_proj[i][img_idx] == 0:
+                            if len(vision_proj[i][img_idx].shape) == 0:
                                 print(f"vision_pro 's shape {vision_proj.shape}")
                             # 拼接 before, vision_proj, after
                             h[i] = torch.cat((before, vision_proj[i][img_idx], after), dim=0)[:seqlen]
