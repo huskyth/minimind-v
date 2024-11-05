@@ -51,7 +51,7 @@ def init_model(lm_config):
 
     print(f'模型参数: {count_parameters(model) / 1e6} 百万 = {count_parameters(model) / 1e9} B (Billion)')
 
-    (vision_model, preprocess) = get_vision_model()
+    (vision_model, preprocess) = get_vision_model("clip")
     vision_model = vision_model.to(device)
     return model, tokenizer, (vision_model, preprocess)
 

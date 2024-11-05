@@ -177,7 +177,7 @@ if __name__ == "__main__":
     parser.add_argument("--use_wandb", default=False, action="store_true", help="Use Weights & Biases")
     parser.add_argument("--wandb_project", type=str, default="MiniMind-V", help="Weights & Biases project name")
     parser.add_argument("--num_workers", type=int, default=8, help="Number of workers for data loading")
-    parser.add_argument("--data_path", type=str, default="./dataset/LLaVA-Instruct/llava_instruct_230k.json",
+    parser.add_argument("--data_path", type=str, default="./dataset/LLaVA-Instruct/pokemon_data.json",
                         help="Path to training data")
     parser.add_argument("--data_path_multi", type=str, default="./dataset/sft_multi_images/output.json",
                         help="Path to multi images training data")

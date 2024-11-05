@@ -1,0 +1,6 @@
+out
+model/clip_model/clip-vit-base-patch32
+*pyc
+.idea
+*png
+*json
