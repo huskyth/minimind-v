@@ -168,7 +168,7 @@ def init_distributed_mode():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="MiniMind-V-SFT")
     parser.add_argument("--out_dir", type=str, default="out", help="Output directory")
-    parser.add_argument("--epochs", type=int, default=19, help="Number of epochs")
+    parser.add_argument("--epochs", type=int, default=100, help="Number of epochs")
     parser.add_argument("--batch_size", type=int, default=32, help="Batch size")
     parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate")
     parser.add_argument("--device", type=str, default="cuda:0" if torch.cuda.is_available() else "cpu",
@@ -186,7 +186,7 @@ if __name__ == "__main__":
     parser.add_argument("--grad_clip", type=float, default=1.0, help="Gradient clipping threshold")
     parser.add_argument("--warmup_iters", type=int, default=0, help="Number of warmup iterations")
     parser.add_argument("--log_interval", type=int, default=100, help="Logging interval")
-    parser.add_argument("--save_interval", type=int, default=100, help="Model saving interval")
+    parser.add_argument("--save_interval", type=int, default=10, help="Model saving interval")
     parser.add_argument('--local_rank', type=int, default=-1, help='local rank for distributed training')
     parser.add_argument('--multi', type=bool, default=False, help='multi-images training')
     parser.add_argument('--save_last', type=bool, default=True, help='save last step model')
