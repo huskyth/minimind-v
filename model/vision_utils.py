@@ -70,3 +70,9 @@ def get_img_embedding(batch_encoding, vision_model):
     all_embeddings = torch.stack(embeddings, dim=0).squeeze()
     # torch.Size([32, 4, 50, 768]) or torch.Size([32, 2, 196, 768])
     return all_embeddings
+
+
+if __name__ == '__main__':
+    model_path = "./clip_model/clip-vit-base-patch32"
+    model = CLIPModel.from_pretrained(model_path)
+    print(model)

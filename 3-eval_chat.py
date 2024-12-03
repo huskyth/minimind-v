@@ -25,7 +25,7 @@ def init_model(lm_config, device, multi):
         if multi:
             ckp = f'./out/{lm_config.dim}{moe_path}_vlm_sft_multi.pth'
         else:
-            ckp = f'./out/{lm_config.dim}{moe_path}_vlm_sft.pth'
+            ckp = f'./out/{lm_config.dim}{moe_path}_vlm_pretrain.pth'
         model = Transformer(lm_config)
         state_dict = torch.load(ckp, map_location=device)
 

@@ -169,13 +169,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="MiniMind-V-SFT")
     parser.add_argument("--out_dir", type=str, default="out", help="Output directory")
     parser.add_argument("--epochs", type=int, default=100, help="Number of epochs")
-    parser.add_argument("--batch_size", type=int, default=32, help="Batch size")
+    parser.add_argument("--batch_size", type=int, default=64, help="Batch size")
     parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate")
     parser.add_argument("--device", type=str, default="cuda:0" if torch.cuda.is_available() else "cpu",
                         help="Device to use")
     parser.add_argument("--dtype", type=str, default="bfloat16", help="Data type")
     parser.add_argument("--use_wandb", default=True, action="store_true", help="Use Weights & Biases")
-    parser.add_argument("--wandb_project", type=str, default="MiniMind-V", help="Weights & Biases project name")
+    parser.add_argument("--wandb_project", type=str, default="MiniMind(Husky)-V", help="Weights & Biases project name")
     parser.add_argument("--num_workers", type=int, default=8, help="Number of workers for data loading")
     parser.add_argument("--data_path", type=str, default="./dataset/LLaVA-Instruct/pokemon_data.json",
                         help="Path to training data")

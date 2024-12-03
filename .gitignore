@@ -6,3 +6,4 @@ model/clip_model/clip-vit-base-patch32
 *json
 wandb
 upload
+*.webp
